@@ -4,11 +4,15 @@ import Header from "./components/header/Header";
 import Coin from "./pages/Coin";
 import Coins from "./pages/Coins";
 import Home from "./pages/Home";
+import React from "react";
 import NotFound from "./pages/NotFound";
+import { useSelector } from "react-redux";
 
 function App() {
+  // eslint-disable-next-line no-unused-vars
+  const theme = useSelector((state) => state.theme.value);
   return (
-    <div data-theme="dark" className="min-h-screen">
+    <div data-theme={theme ? "light" : "dark"} className="min-h-screen">
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
