@@ -12,7 +12,10 @@ function App() {
   // eslint-disable-next-line no-unused-vars
   const theme = useSelector((state) => state.theme.value);
   return (
-    <div data-theme={theme ? "light" : "dark"} className="min-h-screen">
+    <div
+      data-theme={theme ? "light" : "dark"}
+      className="min-h-screen w-screen"
+    >
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
