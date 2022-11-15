@@ -7,10 +7,9 @@ export default function Theme() {
 
   return (
     <label className="swap swap-rotate">
-      <input type="checkbox" />
+      <input type="checkbox" onClick={() => dispatch(themeSwitch())} />
 
       <svg
-        onClick={() => dispatch(themeSwitch())}
         className="swap-on fill-current w-7 h-7"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
@@ -19,7 +18,6 @@ export default function Theme() {
       </svg>
 
       <svg
-        onClick={() => dispatch(themeSwitch())}
         className="swap-off fill-current w-7 h-7"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"

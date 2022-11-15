@@ -13,7 +13,6 @@ export default function Trending() {
 
   return (
     <div className="flex justify-between w-[1500px]">
-        {console.log(datas)}
       {
         datas?.map(data =>
             <div key={data.item.coin_id} className="flex flex-col gap-6 bg-base-200 w-40 h-48 px-3 py-6 rounded-md font-bold text-xs shadow-lg hover:shadow-none">
