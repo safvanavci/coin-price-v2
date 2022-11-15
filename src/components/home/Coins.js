@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Sparklines, SparklinesLine } from "react-sparklines";
+import { Link } from "react-router-dom";
 
 export default function Coins() {
   const [datas, setDatas] = useState();
@@ -32,38 +33,40 @@ export default function Coins() {
         </h1>
       </div>
       {datas?.map((data) => (
+        <Link to={`/coin/${data.id}`} key={data.id} >
         <div
-          key={data.id}
+          
           className="grid xl:grid-cols-5 grid-cols-4 items-center h-20 border border-base-300 rounded-xl px-5 hover:bg-base-200"
-        >
+          >
           <div className="flex items-center gap-3">
             <img src={data.image} className="w-8 h-8 rounded-full" />
-            <p className="font-semibold">{data.symbol.toUpperCase()}</p>
-            <p className="text-xs hidden lg:inline">{data.name}</p>
+            <div className="font-semibold">{data.symbol.toUpperCase()}</div>
+            <div className="text-xs hidden lg:inline">{data.name}</div>
           </div>
-          <p className="justify-self-center">
+          <div className="justify-self-center">
             ${data.current_price.toLocaleString()}
-          </p>
-          <p className="justify-self-center">
+          </div>
+          <div className="justify-self-center">
             {data.price_change_percentage_24h > 0 ? (
-              <p className="text-green-600">
+                <div className="text-green-600">
                 +{data.price_change_percentage_24h.toFixed(2)}%
-              </p>
+              </div>
             ) : (
-              <p className="text-red-600">
+                <div className="text-red-600">
                 {data.price_change_percentage_24h.toFixed(2)}%
-              </p>
+              </div>
             )}
-          </p>
-          <p className="justify-self-center hidden xl:inline">
+          </div>
+          <div className="justify-self-center hidden xl:inline">
             ${data.market_cap.toLocaleString()}{" "}
-          </p>
+          </div>
           <div className="lg:w-40 w-24 justify-self-center">
             <Sparklines data={data.sparkline_in_7d.price}>
               <SparklinesLine color="teal" />
             </Sparklines>
           </div>
         </div>
+            </Link>
       ))}
     </div>
   );

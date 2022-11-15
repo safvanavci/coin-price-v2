@@ -12,7 +12,7 @@ export default function Home() {
         </div>
         <Trending />
       </div>
-      <div className="md:flex py-20 px-3 lg:px-0 ">
+      <div className="flex flex-wrap-reverse py-20 px-3 lg:px-0 ">
         <Coins/>
         <Calculate/>
       </div>
