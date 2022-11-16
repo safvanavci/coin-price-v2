@@ -14,7 +14,7 @@ function App() {
   return (
     <div
       data-theme={theme ? "light" : "dark"}
-      className="min-h-screen w-screen"
+      className="min-h-screen w-full"
     >
       <Header />
       <Routes>

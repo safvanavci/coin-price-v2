@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Sparklines, SparklinesLine } from "react-sparklines";
 import { Link } from "react-router-dom";
+import Headers from "../Headers";
 
 export default function Coins() {
   const [datas, setDatas] = useState();
@@ -15,23 +16,7 @@ export default function Coins() {
 
   return (
     <div className="flex flex-col gap-5 lg:text-base text-xs">
-      <div className="grid xl:grid-cols-5 grid-cols-4 items-center  font-extrabold">
-        <h1 className="justify-self-center">
-            Name
-        </h1>
-        <h1 className="justify-self-center">
-            Price
-        </h1>
-        <h1 className="justify-self-center">
-            24h Change
-        </h1>
-        <h1 className="justify-self-center hidden xl:inline">
-            Market Cap
-        </h1>
-        <h1 className="justify-self-center">
-            Last 7 Days
-        </h1>
-      </div>
+      <Headers/>
       {datas?.map((data) => (
         <Link to={`/coin/${data.id}`} key={data.id} >
         <div
