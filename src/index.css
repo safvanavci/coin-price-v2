@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-.trending::-webkit-scrollbar{
-    display: none;
+.trending::-webkit-scrollbar {
+  display: none;
+}
+
+.coinstats div {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  border: 1px solid;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--b3, var(--b2)) / var(--tw-border-opacity));
+}
+.coinstats div:hover {
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--b2, var(--b1)) / var(--tw-bg-opacity));
+}
+.coinstats div span:nth-child(2) {
+  font-weight: 500;
 }
