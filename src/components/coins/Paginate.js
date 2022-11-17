@@ -4,7 +4,7 @@ import Coin from "./Coin";
 import axios from "axios";
 
 // eslint-disable-next-line react/prop-types
-export default function Paginate({ itemsPerPage }) {
+export default function Paginate({ itemsPerPage,search }) {
     
   useEffect(() => {
     axios
@@ -26,13 +26,13 @@ export default function Paginate({ itemsPerPage }) {
 
   return (
     <>
-      <Coin currentItems={currentItems} />
+      <Coin currentItems={currentItems} search={search} />
       <ReactPaginate
       className="flex mx-auto my-8"
         breakLabel="..."
         nextLabel="»"
         onPageChange={handlePageClick}
-        pageRangeDisplayed={5}
+        pageRangeDisplayed={1}
         pageCount={pageCount}
         previousLabel="«"
         renderOnZeroPageCount={null}

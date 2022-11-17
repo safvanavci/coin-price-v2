@@ -1,5 +1,5 @@
 import React from "react";
-import Calculate from "../components/home/Calculate";
+import Sidebar from "../components/home/Sidebar";
 import Coins from "../components/home/Coins";
 import Trending from "../components/home/Trending";
 
@@ -14,7 +14,7 @@ export default function Home() {
       </div>
       <div className="flex flex-wrap-reverse py-20 px-3 lg:px-0 ">
         <Coins/>
-        <Calculate/>
+        <Sidebar/>
       </div>
     </div>
   );

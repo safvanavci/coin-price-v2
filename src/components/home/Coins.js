@@ -15,7 +15,7 @@ export default function Coins() {
   }, []);
 
   return (
-    <div className="flex flex-col gap-5 lg:text-base text-xs">
+    <div className="flex flex-col gap-5 lg:text-base text-xs w-full lg:flex-1">
       <Headers/>
       {datas?.map((data) => (
         <Link to={`/coin/${data.id}`} key={data.id} >

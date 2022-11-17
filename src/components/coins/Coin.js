@@ -2,12 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Sparklines, SparklinesLine } from "react-sparklines";
 // eslint-disable-next-line react/prop-types
-export default function Coin({ currentItems }) {
+export default function Coin({ currentItems,search }) {
   return (
     <>
       {currentItems &&
         // eslint-disable-next-line react/prop-types
-        currentItems.map((item) => (
+        currentItems.filter((item)=> item.name.toLowerCase().includes(search.toLowerCase())).map((item) => (
           <Link to={`/coin/${item.id}`} key={item.id}>
             <div className="grid xl:grid-cols-5 grid-cols-4 items-center h-20 border border-base-300 rounded-xl px-5 hover:bg-base-200">
               <div className="flex items-center gap-3">
