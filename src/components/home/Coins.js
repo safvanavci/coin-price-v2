@@ -1,18 +1,11 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+/* eslint-disable react/prop-types */
+import React from "react";
 import { Sparklines, SparklinesLine } from "react-sparklines";
 import { Link } from "react-router-dom";
 import Headers from "../Headers";
 
-export default function Coins() {
-  const [datas, setDatas] = useState();
+export default function Coins({datas}) {
 
-  useEffect(() => {
-    axios
-      // eslint-disable-next-line no-undef
-      .get(process.env.REACT_APP_API_KEY)
-      .then((res) => setDatas(res.data));
-  }, []);
 
   return (
     <div className="flex flex-col gap-5 lg:text-base text-xs w-full lg:flex-1">

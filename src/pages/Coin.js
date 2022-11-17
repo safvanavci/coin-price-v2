@@ -13,7 +13,8 @@ export default function Coin() {
   
   useEffect(() => {
     axios
-      .get(`https://api.coingecko.com/api/v3/coins/${params.id}?sparkline=true`)
+      // eslint-disable-next-line no-undef
+      .get( `${process.env.REACT_APP_API_KEY_COIN + params.id}?sparkline=true`)
       .then((res) => setData(res.data));
   }, []);
 

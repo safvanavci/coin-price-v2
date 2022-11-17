@@ -1,11 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import {BsSearch} from 'react-icons/bs'
+import Convert from './Convert'
 
-export default function Sidebar() {
+// eslint-disable-next-line react/prop-types
+export default function Sidebar({datas}) {
   return (
     <div className='w-[350px] mx-auto px-0 lg:px-6 self-end sticky top-5'>
-      <div className="form-control">
+      <div className="form-control mb-5">
         <Link to='coins' className='cursor-pointer'>
           <label className="input-group input-group-sm">
           <span><BsSearch/></span>
@@ -13,6 +15,7 @@ export default function Sidebar() {
         </label>
         </Link>
       </div>
+      <Convert datas={datas}/>
     </div>
   )
 }

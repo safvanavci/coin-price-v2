@@ -23,3 +23,9 @@
 .coinstats div span:nth-child(2) {
   font-weight: 500;
 }
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
