@@ -46,6 +46,12 @@ export default function Coins({datas}) {
         </div>
             </Link>
       ))}
+
+      <Link to='coins' className="mx-auto">
+        <button className="btn btn-outline w-fit">
+          See All Coins
+        </button>
+      </Link>
     </div>
   );
 }
