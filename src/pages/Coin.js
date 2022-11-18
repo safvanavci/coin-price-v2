@@ -53,7 +53,7 @@ export default function Coin() {
 
       <div className="lg:flex justify-between">
         <Graphic data={data} />
-        <div className="md:flex justify-between lg:inline mx-auto md:mx-0 md:w-auto w-[350px]">
+        <div className="md:flex justify-between lg:inline mx-auto md:mx-0 w-[350px]">
           <Convert data={data} />
 
           <div className="w-[350px]">

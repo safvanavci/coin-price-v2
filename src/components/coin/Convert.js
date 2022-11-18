@@ -23,7 +23,7 @@ export default function Convert({ data }) {
             }}
             type="number"
             placeholder="0"
-            className="input input-bordered"
+            className="input input-bordered w-full"
           />
         </label>
 
@@ -32,7 +32,7 @@ export default function Convert({ data }) {
           <input
             value={num}
             type="number"
-            className="input input-bordered"
+            className="input input-bordered w-full"
             readOnly
           />
         </label>

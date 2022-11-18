@@ -37,7 +37,6 @@ export default function Convert({ datas }) {
       <div className=" font-bold mb-4 text-lg">
         Convert USD to {coinName[0].toUpperCase() + coinName.substring(1)}
       </div>
-      
       <div className="form-control mb-5">
         <label className="input-group">
           <span className="w-[143px]">USD</span>
@@ -49,7 +48,6 @@ export default function Convert({ datas }) {
           />
         </label>
       </div>
-
       <div className="form-control">
         <label className="input-group">
           <span>
