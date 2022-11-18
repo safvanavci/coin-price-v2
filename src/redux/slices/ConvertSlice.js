@@ -13,8 +13,11 @@ export const ConvertSlice = createSlice({
     getPrice: (state, action) => {
       state.price = action.payload;
     },
+    resetNumber: (state) => {
+      state.number = 0;
+    },
   },
 });
 
-export const { converting, getPrice } = ConvertSlice.actions;
+export const { converting, getPrice, resetNumber } = ConvertSlice.actions;
 export default ConvertSlice.reducer;
